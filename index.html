@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html Lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <title> H&G Trivia </title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="main.js"></script>
+
+    </head>
+    <body onload="init()">
+
+        <div class="container" id="title">
+            <h1> H&G Trivia </h1>
+        </div>
+        <div class='container-button' id="bottons">
+            <button type="button" id="Hist" disabled onclick= "checkButton('hist')">History<button>
+            <button type="button" id="Geo" disabled onclick= "checkButton('geo')">Geography</button>
+        </div>
+        <!-- boxes of queestions-->
+        <div class="container" id = 'q1'>
+            <h2 class = 'title'> Question 1</h2>
+            <p class="quiz" id='questiion1'></p>
+        </div>
+        <div class="container" id = 'q2'>
+            <h2 class = 'title'> Question 2</h2>
+            <p class="quiz" id='question2'></p>
+        </div>
+        <div class="container" id = 'q3'>
+            <h2 class = 'title'> Question 3</h2>
+            <p class="quiz" id='question3'></p>
+        </div>
+        <div class="container" id = 'q4'>
+            <h2 class = 'title'> Question 4</h2>
+            <p class="quiz" id='question4'></p>
+        </div>
+        <div class="container" id = 'q5'>
+            <h2 class = 'title'> Question 5</h2>
+            <p class="quiz" id='question5'></p>
+        </div>
+        <div class="container" id = 'q6'>
+            <h2 class = 'title'> Question 6</h2>
+            <p class="quiz" id='question6'></p>
+        </div>
+    </body>
+</html>
