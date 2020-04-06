@@ -101,11 +101,25 @@ function renderQuestion(questions){
     var quiz4 = document.getElementById('question4');    
     var quiz5 = document.getElementById('question5');    
     var quiz6 = document.getElementById('question6');  
-    
+
+    var image1 = document.getElementById('img1');
+    var image2 = document.getElementById('img2');
+    var image3 = document.getElementById('img3');
+    var image4 = document.getElementById('img4');
+    var image5 = document.getElementById('img5');
+    var image6 = document.getElementById('img6');
+
     quiz1.innerHTML = questions['q1']['q'];
     quiz2.innerHTML = questions['q2']['q'];
     quiz3.innerHTML = questions['q3']['q'];
     quiz4.innerHTML = questions['q4']['q'];
     quiz5.innerHTML = questions['q5']['q'];
     quiz6.innerHTML = questions['q6']['q'];
+    
+    image1.src = questions['q1']['pic'];
+    image2.src = questions['q2']['pic'];
+    image3.src = questions['q3']['pic'];
+    image4.src = questions['q4']['pic'];
+    image5.src = questions['q5']['pic'];
+    image6.src = questions['q6']['pic'];
 }
