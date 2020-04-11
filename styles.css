@@ -6,7 +6,7 @@ body{
 
 .container, .container-button{
     width: 90%;
-    height: 500px;
+    height: 600px;
     background-color: wheat;
     margin-right: auto;
     margin-left: auto;
@@ -48,3 +48,24 @@ body{
     font-size: 16px;
     
   }
+
+.inputbox, .displaybox{
+    width: 20%;
+    outline-style: dotted;
+    outline-color: chocolate;
+    outline-width: 3px;
+    margin-left: 20px;
+    margin-right:20px;
+    float: left;
+}
+
+.inputbox{
+    width: 20%;
+    height: 80%;
+
+}
+
+.displaybox{
+    width: 50%;
+    height: 80%;
+}
