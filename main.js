@@ -122,4 +122,40 @@ function renderQuestion(questions){
     image4.src = questions['q4']['pic'];
     image5.src = questions['q5']['pic'];
     image6.src = questions['q6']['pic'];
+    
+    var buttons_q1 = document.getElementsByClassName('button1');
+    buttons_q1[0].innerHTML = questions['q1']['options'][0];
+    buttons_q1[1].innerHTML = questions['q1']['options'][1];
+    buttons_q1[2].innerHTML = questions['q1']['options'][2];
+    buttons_q1[3].innerHTML = questions['q1']['options'][3];
+
+    var buttons_q2 = document.getElementsByClassName('button2');
+    buttons_q2[0].innerHTML = questions['q2']['options'][0];
+    buttons_q2[1].innerHTML = questions['q2']['options'][1];
+    buttons_q2[2].innerHTML = questions['q2']['options'][2];
+    buttons_q2[3].innerHTML = questions['q2']['options'][3];
+
+    var buttons_q3 = document.getElementsByClassName('button3');
+    buttons_q3[0].innerHTML = questions['q3']['options'][0];
+    buttons_q3[1].innerHTML = questions['q3']['options'][1];
+    buttons_q3[2].innerHTML = questions['q3']['options'][2];
+    buttons_q3[3].innerHTML = questions['q3']['options'][3];
+
+    var buttons_q4 = document.getElementsByClassName('button4');
+    buttons_q4[0].innerHTML = questions['q4']['options'][0];
+    buttons_q4[1].innerHTML = questions['q4']['options'][1];
+    buttons_q4[2].innerHTML = questions['q4']['options'][2];
+    buttons_q4[3].innerHTML = questions['q4']['options'][3];
+
+    var buttons_q5 = document.getElementsByClassName('button5');
+    buttons_q5[0].innerHTML = questions['q5']['options'][0];
+    buttons_q5[1].innerHTML = questions['q5']['options'][1];
+    buttons_q5[2].innerHTML = questions['q5']['options'][2];
+    buttons_q5[3].innerHTML = questions['q5']['options'][3];
+
+    var buttons_q6 = document.getElementsByClassName('button6');
+    buttons_q6[0].innerHTML = questions['q6']['options'][0];
+    buttons_q6[1].innerHTML = questions['q6']['options'][1];
+    buttons_q6[2].innerHTML = questions['q6']['options'][2];
+    buttons_q6[3].innerHTML = questions['q6']['options'][3];
 }
