@@ -6,7 +6,7 @@ body{
 
 .container, .container-button{
     width: 90%;
-    height: 500px;
+    height: 600px;
     background-color: wheat;
     margin-right: auto;
     margin-left: auto;
@@ -48,3 +48,39 @@ body{
     font-size: 16px;
     
   }
+
+.inputbox, .displaybox{
+
+    border: 1px solid black;
+    position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
+    float: left;
+}
+
+.inputbox{
+    width: 20%;
+    height: 80%;
+
+}
+
+.displaybox{
+    width: 40%;
+    height: 80%;
+}
+
+.answer{
+    width: 100%;
+    height: 45%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    background-image:linear-gradient(burlywood,rgb(46, 217, 208));
+    opacity: 100%;
+
+}
+
+.scoreboard{
+    height: 10%;
+    
+
+}

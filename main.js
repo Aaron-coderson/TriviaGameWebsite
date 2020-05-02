@@ -1,5 +1,5 @@
 // define global variabalesss
- var Geography_Trivia = {
+var Geography_Trivia = {
     'q1':{
         'q': "The highest mountain on Earth, Mount Everest, is located in which mountain range?",
         'options': ['Rocky Mountains', 'Alps','Himalayas','Andes'],
@@ -67,8 +67,9 @@ var History_Trivia = {
     }
 };
 
-
-
+//global variable
+var questions_cat;
+var score=0;
 
 function init (){
     // initialiszation of page
@@ -87,14 +88,19 @@ function checkButton(topic){
     geo_button.disabled = true;
 
     if(topic == 'hist'){
-        renderQuestion(History_Trivia)
+        renderQuestion(History_Trivia);
+        questions_cat = History_Trivia;
     }
     else{
-        renderQuestion(Geography_Trivia)
+        renderQuestion(Geography_Trivia);
+        questions_cat = Geography_Trivia;
     }
     
+
 }
+
 function renderQuestion(questions){
+
     var quiz1 = document.getElementById('question1');    
     var quiz2 = document.getElementById('question2');    
     var quiz3 = document.getElementById('question3');    
@@ -122,4 +128,62 @@ function renderQuestion(questions){
     image4.src = questions['q4']['pic'];
     image5.src = questions['q5']['pic'];
     image6.src = questions['q6']['pic'];
+    
+    var buttons_q1 = document.getElementsByClassName('button1');
+    buttons_q1[0].innerHTML = questions['q1']['options'][0];
+    buttons_q1[1].innerHTML = questions['q1']['options'][1];
+    buttons_q1[2].innerHTML = questions['q1']['options'][2];
+    buttons_q1[3].innerHTML = questions['q1']['options'][3];
+
+    var buttons_q2 = document.getElementsByClassName('button2');
+    buttons_q2[0].innerHTML = questions['q2']['options'][0];
+    buttons_q2[1].innerHTML = questions['q2']['options'][1];
+    buttons_q2[2].innerHTML = questions['q2']['options'][2];
+    buttons_q2[3].innerHTML = questions['q2']['options'][3];
+
+    var buttons_q3 = document.getElementsByClassName('button3');
+    buttons_q3[0].innerHTML = questions['q3']['options'][0];
+    buttons_q3[1].innerHTML = questions['q3']['options'][1];
+    buttons_q3[2].innerHTML = questions['q3']['options'][2];
+    buttons_q3[3].innerHTML = questions['q3']['options'][3];
+
+    var buttons_q4 = document.getElementsByClassName('button4');
+    buttons_q4[0].innerHTML = questions['q4']['options'][0];
+    buttons_q4[1].innerHTML = questions['q4']['options'][1];
+    buttons_q4[2].innerHTML = questions['q4']['options'][2];
+    buttons_q4[3].innerHTML = questions['q4']['options'][3];
+
+    var buttons_q5 = document.getElementsByClassName('button5');
+    buttons_q5[0].innerHTML = questions['q5']['options'][0];
+    buttons_q5[1].innerHTML = questions['q5']['options'][1];
+    buttons_q5[2].innerHTML = questions['q5']['options'][2];
+    buttons_q5[3].innerHTML = questions['q5']['options'][3];
+
+    var buttons_q6 = document.getElementsByClassName('button6');
+    buttons_q6[0].innerHTML = questions['q6']['options'][0];
+    buttons_q6[1].innerHTML = questions['q6']['options'][1];
+    buttons_q6[2].innerHTML = questions['q6']['options'][2];
+    buttons_q6[3].innerHTML = questions['q6']['options'][3];
+}
+
+function checkAns(q,num,button_class){
+    var buttons = document.getElementsByClassName(button_class)
+    let answer = questions_cat[q]['options'][num];
+    let correct_answer = questions_cat[q]['ans'];
+    if(correct_answer==answer){
+        score= score+1;
+        buttons[num].style.background = '#66cc00';
+        document.getElementById('score').innerHTML = score;
+    
+    }
+    else{
+        score = score-1;
+        buttons[num].style.background = '#cc0000';
+        document.getElementById('score').innerHTML = score;
+
+    }
+    for (i = 0; i<4 ; i++) {
+        buttons[i].disabled = true;
+      }
+
 }
