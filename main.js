@@ -70,6 +70,7 @@ var History_Trivia = {
 //global variable
 var questions_cat;
 var score=0;
+var username = 'none';
 
 function init (){
     // initialiszation of page
@@ -187,3 +188,28 @@ function checkAns(q,num,button_class){
       }
 
 }
+
+function enterName(){
+    username = document.getElementById('user').value;
+    console.log(username)
+}
+
+function updateLocalStorage(){
+    console.log('Im here')
+    console.log(window.localStorage)
+
+    var storage = window.localStorage;
+    var newEntry = [username,score];
+    
+    var key = 0;
+    var val = window.localStorage.getItem(key);
+    while (val != null){
+        key = key+1
+        val = window.localStorage.getItem(key);
+    }
+
+    window.localStorage.setItem(key, newEntry);
+
+
+}
+
