@@ -79,6 +79,13 @@ function init (){
     // activate button
     hist_button.disabled = false;
     geo_button.disabled = false;
+
+    var storage = window.localStorage;
+    var name = storage.getItem('name');
+    var highScore = storage.getItem('HighScore');
+
+    document.getElementById('HighScoreName').innerHTML = name;
+    document.getElementById('HighScore').innerHTML = highScore;
 };
 function checkButton(topic){
     // check wich button clicked
@@ -195,21 +202,26 @@ function enterName(){
 }
 
 function updateLocalStorage(){
-    console.log('Im here')
-    console.log(window.localStorage)
-
     var storage = window.localStorage;
-    var newEntry = [username,score];
-    
-    var key = 0;
-    var val = window.localStorage.getItem(key);
-    while (val != null){
-        key = key+1
-        val = window.localStorage.getItem(key);
+    var name = storage.getItem('name');
+    var highScore = storage.getItem('HighScore');
+
+
+    if((name==null)&&(highScore ==null)){
+        storage.setItem('name', username);
+        storage.setItem('HighScore',score);
+
     }
 
-    window.localStorage.setItem(key, newEntry);
-
+    else{
+        if(parseInt(highScore)<score){
+            console.log('ENTERED THE IF')
+            storage.setItem('name',username);
+            storage.setItem('HighScore',score)
+        }
+    }
+    document.getElementById('HighScoreName').innerHTML = storage.getItem('name');
+    document.getElementById('HighScore').innerHTML = storage.getItem('HighScore');
 
 }
 
