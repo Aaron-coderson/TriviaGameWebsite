@@ -6,22 +6,20 @@
         <link rel="stylesheet" href="styles.css">
         <script src="main.js"></script>
 
+        
+
     </head>
-    <head>
-        <div>
-            <meta charset = 'UTF-8'>
-            <title> Button Demo </title>
-            <script src="main.js"></script>
-        </div>
-            <label>Enter your username </label> 
-            <input id = 'username' type = 'text' value = ''>
-            <button type = 'button' onclick = 'getName();updateLocalStorage()'> Submit </button>
-            updateLocalStorage()
-    </head>
+
     <body onload="init()">
 
         <div class="container" id="title">
             <h1> H&G Trivia </h1>
+        </div>
+
+        <div class = 'container-button'>
+            <label id="cow">Enter your username </label> 
+            <input id = 'username' type = 'text' value = ''>
+            <button type = 'button' onclick = 'getName(); updateLocalStorage()'> Submit </button>
         </div>
 
         <div class='container-button' id="bottons">
