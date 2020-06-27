@@ -195,11 +195,19 @@ function checkAns(q,num,button_class){
       }
 
 }
-
+/*
 function enterName(){
     username = document.getElementById('user').value;
     console.log(username)
 }
+*/
+function getName(){
+    username = document.getElementById('username').value;
+    console.log(name);
+}
+
+
+
 
 function updateLocalStorage(){
     var storage = window.localStorage;

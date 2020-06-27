@@ -7,18 +7,23 @@
         <script src="main.js"></script>
 
     </head>
+    <head>
+        <div>
+            <meta charset = 'UTF-8'>
+            <title> Button Demo </title>
+            <script src="main.js"></script>
+        </div>
+            <label>Enter your username </label> 
+            <input id = 'username' type = 'text' value = ''>
+            <button type = 'button' onclick = 'getName();updateLocalStorage()'> Submit </button>
+            updateLocalStorage()
+    </head>
     <body onload="init()">
 
         <div class="container" id="title">
             <h1> H&G Trivia </h1>
         </div>
 
-        <div class="container scoreboard">
-            <form id="username">
-                <label>Enter Username</label>
-                <input type="text" id="user" value= " " onkeyup = "enterName()">
-            </form>
-        </div>
         <div class='container-button' id="bottons">
             <button type="button" id="Hist" disabled onclick= "checkButton('hist')">History<button>
             <button type="button" id="Geo" disabled onclick= "checkButton('geo')">Geography</button>
